@@ -141,7 +141,7 @@ class VentaService
         $clienteTop = $this->clienteQueMasGasto();
         $productoTop = $this->productoMasVendido();
         
-        // Calcular ingresos totales
+        
         $ingresosTotales = 0;
         foreach ($this->ventas as $venta) {
             $ingresosTotales += $venta->getTotal();

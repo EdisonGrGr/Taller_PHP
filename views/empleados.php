@@ -19,7 +19,11 @@
                 <a class="nav-link" href="index.php">Inicio</a>
                 <a class="nav-link active" href="empleados.php">Empleados</a>
                 <a class="nav-link" href="ventas.php">Ventas</a>
+                <a class="nav-link text-warning" href="init_data.php?reset=1">
+                            <i class="fas fa-sync-alt me-1"></i>
+                        </a>
             </div>
+            
         </div>
     </nav>
 
@@ -51,7 +55,7 @@
         </div>
         <?php endif; ?>
 
-        <!-- Estadísticas Principales -->
+        
         <div class="row mb-4">
             <div class="col-lg-4 col-md-6 mb-3">
                 <div class="card bg-primary text-white">
@@ -102,7 +106,7 @@
             </div>
         </div>
 
-        <!-- Herramientas Matemáticas -->
+        
         <div class="row mb-4">
             <div class="col-12">
                 <div class="card">
@@ -129,7 +133,7 @@
             </div>
         </div>
 
-        <!-- Análisis por Departamento -->
+        
         <div class="row mb-4">
             <div class="col-lg-6">
                 <div class="card">
@@ -170,7 +174,7 @@
             </div>
         </div>
 
-        <!-- Lista de Empleados -->
+        
         <div class="card">
             <div class="card-header">
                 <h5><i class="fas fa-list me-2"></i>Lista de Empleados</h5>
@@ -226,7 +230,7 @@
             </div>
         </div>
 
-        <!-- Empleados Destacados -->
+        
         <?php if (!empty($estadisticas['empleados_sobre_promedio'])): ?>
         <div class="card mt-4">
             <div class="card-header">

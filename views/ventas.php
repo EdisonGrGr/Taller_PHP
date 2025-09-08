@@ -18,6 +18,9 @@
                 <a class="nav-link" href="index.php">Inicio</a>
                 <a class="nav-link" href="empleados.php">Empleados</a>
                 <a class="nav-link active" href="ventas.php">Ventas</a>
+                <a class="nav-link text-warning" href="init_data.php?reset=1">
+                            <i class="fas fa-sync-alt me-1"></i>
+                        </a>
             </div>
         </div>
     </nav>

@@ -47,7 +47,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-warning" href="init_data.php?reset=1">
-                            <i class="fas fa-sync-alt me-1"></i>Reiniciar Datos
+                            <i class="fas fa-sync-alt me-1"></i>
                         </a>
                     </li>
                 </ul>
