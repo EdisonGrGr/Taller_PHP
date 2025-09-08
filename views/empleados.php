@@ -8,12 +8,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navegación -->
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.php">
                 <i class="fas fa-building me-2"></i>
-                Sistema Empresarial
+                Sistema
             </a>
             <div class="navbar-nav ms-auto">
                 <a class="nav-link" href="index.php">Inicio</a>
@@ -263,6 +263,16 @@
         </div>
         <?php endif; ?>
     </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Sistema de Gestión.</p>
+            <p class="small mb-0">
+                Ingenieria Informatica - Universidad de Caldas
+            </p>
+            <p class="small mb-0">Jhon Edison Garcia Garcia</p>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

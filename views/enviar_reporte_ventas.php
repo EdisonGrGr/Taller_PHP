@@ -8,12 +8,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navegación -->
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.php">
                 <i class="fas fa-building me-2"></i>
-                Sistema Empresarial
+                Sistema
             </a>
             <div class="navbar-nav ms-auto">
                 <a class="nav-link" href="index.php">Inicio</a>
@@ -73,15 +73,7 @@
                     </div>
                 </div>
                 
-                <div class="card mt-4">
-                    <div class="card-body">
-                        <h6 class="card-title"><i class="fas fa-info-circle me-2"></i>Nota Importante</h6>
-                        <p class="card-text small text-muted">
-                            En modo de desarrollo, el email no se envía realmente pero se genera el PDF y se simula el envío. 
-                            En producción, configure las credenciales SMTP en el servicio EmailService.
-                        </p>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>

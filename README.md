@@ -29,53 +29,8 @@ Aplicación web completa desarrollada en PHP que permite gestionar empleados y v
 ### 4. Librerías Utilizadas
 - **DomPDF**: Generación de reportes PDF
 - **Symfony Mailer**: Envío de correos electrónicos
-- **Intervention Image**: Manipulación de imágenes
 
-## Estructura del Proyecto
 
-```
-empleados-ventas-app/
-├── composer.json              # Configuración de dependencias
-├── composer.lock             
-├── vendor/                   # Dependencias de Composer
-├── public/                   # Archivos públicos
-│   ├── index.php            # Página principal
-│   ├── empleados.php        # Gestión de empleados
-│   ├── ventas.php           # Gestión de ventas
-│   ├── empleado_form.php    # Formulario nuevo empleado
-│   ├── venta_form.php       # Formulario nueva venta
-│   ├── salario_neto.php     # Calculadora salario neto
-│   ├── temperatura.php      # Conversor temperatura
-│   ├── interes_compuesto.php # Calculadora interés
-│   ├── velocidad.php        # Conversor velocidad
-│   ├── empleado_pdf.php     # Generar PDF empleados
-│   ├── venta_pdf.php        # Generar PDF ventas
-│   ├── empleado_email.php   # Enviar reporte empleados
-│   └── venta_email.php      # Enviar reporte ventas
-├── src/                     # Código fuente
-│   ├── Controllers/         # Controladores MVC
-│   │   ├── EmpleadoController.php
-│   │   └── VentaController.php
-│   ├── Models/              # Modelos de datos
-│   │   ├── Empleado.php
-│   │   └── Venta.php
-│   └── Services/            # Servicios de negocio
-│       ├── EmpleadoService.php
-│       ├── VentaService.php
-│       ├── PdfService.php
-│       └── EmailService.php
-└── views/                   # Plantillas HTML
-    ├── empleados.php
-    ├── ventas.php
-    ├── empleado_form.php
-    ├── venta_form.php
-    ├── salario_neto.php
-    ├── temperatura.php
-    ├── interes_compuesto.php
-    ├── velocidad.php
-    ├── enviar_reporte.php
-    └── enviar_reporte_ventas.php
-```
 
 ## Requisitos del Sistema
 
@@ -86,7 +41,9 @@ empleados-ventas-app/
 
 ## Instalación
 
-1. **Clonar/Descargar el proyecto**
+### Opción 1: Servidor PHP Integrado (Recomendado)
+
+1. **Navegar al directorio del proyecto**
    ```bash
    cd c:\xampp\htdocs\Laravel\empleados-ventas-app
    ```
@@ -96,9 +53,33 @@ empleados-ventas-app/
    composer install
    ```
 
-3. **Configurar servidor web**
-   - Apuntar el DocumentRoot a la carpeta `public/`
-   - O acceder via: `http://localhost/empleados-ventas-app/public/`
+3. **Iniciar servidor de desarrollo**
+   ```bash
+   php -S localhost:8000 -t public
+   ```
+
+4. **Acceder a la aplicación**
+   ```
+   http://localhost:8000
+   ```
+
+### Opción 2: Apache/XAMPP
+
+1. **Asegurar que Apache esté corriendo en XAMPP**
+
+2. **Instalar dependencias** (si no se hizo antes)
+   ```bash
+   composer install
+   ```
+
+3. **Acceder a la aplicación**
+   ```
+   http://localhost/Laravel/empleados-ventas-app/public/
+   ```
+
+4. **Configuración adicional requerida**
+   - Crear un Virtual Host apuntando a `/public/` (opcional)
+   - O usar la ruta completa como se muestra arriba
 
 4. **Verificar permisos**
    - Asegurar que PHP pueda escribir en directorios temporales para PDF
@@ -227,22 +208,14 @@ memory_limit=256M
 - **Gestión Dependencias**: Composer
 - **PDF**: DomPDF 2.0
 - **Email**: Symfony Mailer 6.4
-- **Imágenes**: Intervention Image 2.7
 - **Frontend**: Bootstrap 5.3, Font Awesome 6.0
 - **Arquitectura**: MVC, PSR-4
 
 ## Autor
 
-Desarrollado como proyecto académico demostrando:
-- Arquitectura MVC en PHP
-- Integración de librerías externas
-- Análisis estadístico de datos
-- Generación de reportes
-- Operaciones matemáticas aplicadas
-- Diseño responsivo moderno
 
 ---
 
-**Fecha**: Septiembre 2024  
+**Fecha**: Septiembre 2025  
 **Versión**: 1.0.0
 "# Taller_PHP"  

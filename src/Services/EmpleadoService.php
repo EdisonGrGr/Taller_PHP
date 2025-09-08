@@ -124,14 +124,14 @@ class EmpleadoService
     public function crearEmpleadosMuestra(): void
     {
         $empleadosMuestra = [
-            new Empleado("Juan Pérez", 3500000, "Desarrollo"),
+            new Empleado("Sergio Velasquez", 3500000, "Desarrollo"),
             new Empleado("María García", 4200000, "Desarrollo"),
-            new Empleado("Carlos López", 2800000, "Marketing"),
+            new Empleado("Andrea Martinez", 2800000, "Marketing"),
             new Empleado("Ana Rodríguez", 3100000, "Marketing"),
-            new Empleado("Luis Martín", 3800000, "Ventas"),
+            new Empleado("Martín Rodriguez", 3800000, "Ventas"),
             new Empleado("Sofia Hernández", 3600000, "Ventas"),
-            new Empleado("Pedro Gómez", 5000000, "Gerencia"),
-            new Empleado("Laura Díaz", 2900000, "Recursos Humanos"),
+            new Empleado("Cristian Echeverri", 5000000, "Gerencia"),
+            new Empleado("Luis Díaz", 2900000, "Recursos Humanos"),
             new Empleado("Miguel Torres", 3300000, "Desarrollo"),
             new Empleado("Elena Ruiz", 3700000, "Marketing")
         ];

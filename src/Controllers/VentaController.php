@@ -22,7 +22,7 @@ class VentaController
         $this->pdfService = new PdfService();
         $this->emailService = new EmailService();
         
-        // Cargar ventas desde la sesión
+        
         if (isset($_SESSION['ventas'])) {
             $ventas = [];
             foreach ($_SESSION['ventas'] as $ventaData) {
@@ -39,25 +39,16 @@ class VentaController
         }
     }
 
-    /**
-     * Muestra la página principal de ventas
-     */
+    
     public function index(): void
     {
-        // Cargar datos de muestra si no hay ventas
-        if (empty($this->ventaService->getVentas())) {
-            $this->ventaService->crearVentasMuestra();
-        }
-
         $ventas = $this->ventaService->getVentas();
         $estadisticas = $this->ventaService->obtenerEstadisticas();
 
         include __DIR__ . '/../../views/ventas.php';
     }
 
-    /**
-     * Procesa el formulario de nueva venta
-     */
+    
     public function crear(): void
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -72,7 +63,7 @@ class VentaController
                 $venta = new Venta($id, $cliente, $producto, $cantidad, $precioUnitario, $fecha);
                 $this->ventaService->agregarVenta($venta);
                 
-                // Guardar en sesión
+                
                 $this->guardarVentasEnSesion();
                 
                 header('Location: ventas.php?success=1');
@@ -83,9 +74,7 @@ class VentaController
         include __DIR__ . '/../../views/venta_form.php';
     }
 
-    /**
-     * Calcula interés compuesto
-     */
+    
     public function calcularInteres(): void
     {
         $resultado = null;
@@ -104,9 +93,7 @@ class VentaController
         include __DIR__ . '/../../views/interes_compuesto.php';
     }
 
-    /**
-     * Convierte velocidades
-     */
+    
     public function convertirVelocidad(): void
     {
         $resultado = null;
@@ -125,12 +112,10 @@ class VentaController
         include __DIR__ . '/../../views/velocidad.php';
     }
 
-    /**
-     * Genera PDF de reporte de ventas
-     */
+    
     public function generarPdf(): void
     {
-        // Cargar datos si no existen
+        
         if (empty($this->ventaService->getVentas())) {
             $this->ventaService->crearVentasMuestra();
         }
@@ -146,9 +131,7 @@ class VentaController
         exit;
     }
 
-    /**
-     * Envía reporte por email
-     */
+    
     public function enviarReporte(): void
     {
         $mensaje = '';
@@ -157,7 +140,7 @@ class VentaController
             $email = $_POST['email'] ?? '';
             
             if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                // Cargar datos si no existen
+                
                 if (empty($this->ventaService->getVentas())) {
                     $this->ventaService->crearVentasMuestra();
                 }
@@ -185,9 +168,7 @@ class VentaController
         include __DIR__ . '/../../views/enviar_reporte_ventas.php';
     }
 
-    /**
-     * Guarda las ventas en la sesión para persistencia
-     */
+    
     private function guardarVentasEnSesion(): void
     {
         $_SESSION['ventas'] = [];

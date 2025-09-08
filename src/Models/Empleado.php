@@ -38,20 +38,23 @@ class Empleado
     public function calcularSalarioNeto(float $salario = null): array
     {
         $salario = $salario ?? $this->salario;
-        $salarioMinimo = 1160000; // Salario mínimo 2024 Colombia
+        $salarioMinimo = 1423500; 
         
-        // Deducciones de salud (4%)
+        
         $saludEmpleado = $salario * 0.04;
         
-        // Deducciones de pensión (4%)
+        
         $pensionEmpleado = $salario * 0.04;
         
-        // Retención en la fuente (si aplica)
+        
         $retencionFuente = 0;
-        if ($salario > 2620000) { // Aproximadamente 2.5 SMMLV
-            $baseRetencion = $salario - 2620000;
-            $retencionFuente = $baseRetencion * 0.19; // 19% sobre el excedente
-        }
+        $smmlv = 1423500; 
+$umbral = $smmlv * 2.5; 
+
+if ($salario > $umbral) {
+    $baseRetencion = $salario - $umbral;
+    $retencionFuente = $baseRetencion * 0.19; 
+}
         
         $totalDeducciones = $saludEmpleado + $pensionEmpleado + $retencionFuente;
         $salarioNeto = $salario - $totalDeducciones;

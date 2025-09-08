@@ -46,10 +46,7 @@ class EmailService
                 $email->addPart(new DataPart($adjuntoPdf, $nombreAdjunto, 'application/pdf'));
             }
 
-            // En desarrollo, simular envío exitoso
-            // $this->mailer->send($email);
             
-            // Log del email para desarrollo
             $this->logEmail($destinatario, $asunto, $contenido, $nombreAdjunto);
             
             return true;

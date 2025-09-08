@@ -8,12 +8,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navegación -->
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.php">
                 <i class="fas fa-building me-2"></i>
-                Sistema Empresarial
+                Sistema
             </a>
             <div class="navbar-nav ms-auto">
                 <a class="nav-link" href="index.php">Inicio</a>
@@ -126,10 +126,7 @@
                                     </table>
                                 </div>
                                 
-                                <div class="alert alert-info">
-                                    <strong>Fórmula:</strong> Monto Final = Capital × (1 + tasa)^tiempo<br>
-                                    <strong>Rentabilidad:</strong> <?= number_format((($resultado['monto_final'] / $resultado['capital_inicial']) - 1) * 100, 2) ?>%
-                                </div>
+                                
                             </div>
                         </div>
                         <?php endif; ?>

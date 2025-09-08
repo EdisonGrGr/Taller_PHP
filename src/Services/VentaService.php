@@ -162,16 +162,16 @@ class VentaService
     public function crearVentasMuestra(): void
     {
         $ventasMuestra = [
-            new Venta(1, "Carlos Mendoza", "Laptop HP", 2, 2500000, "2024-01-15"),
-            new Venta(2, "Ana Silva", "Mouse Logitech", 5, 80000, "2024-01-16"),
-            new Venta(3, "Luis González", "Teclado Mecánico", 3, 150000, "2024-01-17"),
-            new Venta(4, "María Fernández", "Monitor Samsung", 1, 800000, "2024-01-18"),
-            new Venta(5, "Carlos Mendoza", "Impresora Canon", 1, 600000, "2024-01-19"),
-            new Venta(6, "Ana Silva", "Laptop HP", 1, 2500000, "2024-01-20"),
-            new Venta(7, "Pedro Ramírez", "Mouse Logitech", 10, 80000, "2024-01-21"),
-            new Venta(8, "Luis González", "Tablet iPad", 2, 1200000, "2024-01-22"),
-            new Venta(9, "María Fernández", "Teclado Mecánico", 2, 150000, "2024-01-23"),
-            new Venta(10, "Sofia Herrera", "Laptop HP", 1, 2500000, "2024-01-24"),
+            new Venta(1, "Daniel Arias", "Laptop HP", 2, 2500000, "2025-01-15"),
+            new Venta(2, "Ana Silva", "Mouse Logitech", 5, 80000, "2025-02-16"),
+            new Venta(3, "Stiven Martinez", "Teclado Mecánico", 3, 150000, "2025-03-17"),
+            new Venta(4, "María Fernández", "Monitor Samsung", 1, 800000, "2025-04-18"),
+            new Venta(5, "Carlos Mendoza", "Impresora Canon", 1, 600000, "2025-05-19"),
+            new Venta(6, "Ana Silva", "Laptop HP", 1, 2500000, "2025-06-20"),
+            new Venta(7, "Pedro Ramírez", "Mouse Logitech", 10, 80000, "2025-07-21"),
+            new Venta(8, "Luis González", "Tablet iPad", 2, 1200000, "2024-12-22"),
+            new Venta(9, "María Fernández", "Teclado Mecánico", 2, 150000, "2024-11-23"),
+            new Venta(10, "Sofia Herrera", "Laptop HP", 1, 2500000, "2024-10-24"),
             new Venta(11, "Carlos Mendoza", "Mouse Logitech", 3, 80000, "2024-01-25"),
             new Venta(12, "Ana Silva", "Monitor Samsung", 2, 800000, "2024-01-26")
         ];

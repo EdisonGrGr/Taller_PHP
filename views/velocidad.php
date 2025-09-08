@@ -8,12 +8,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navegación -->
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.php">
                 <i class="fas fa-building me-2"></i>
-                Sistema Empresarial
+                Sistema
             </a>
             <div class="navbar-nav ms-auto">
                 <a class="nav-link" href="index.php">Inicio</a>
@@ -111,18 +111,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="alert alert-info mt-3">
-                                    <strong>Conversión realizada:</strong><br>
-                                    <?= $resultado['valor_original'] ?> <?= $unidades[$resultado['unidad_origen']] ?> = 
-                                    <?= $resultado['valor_convertido'] ?> <?= $unidades[$resultado['unidad_destino']] ?>
-                                </div>
                                 
-                                <div class="alert alert-secondary">
-                                    <strong>Factores de conversión:</strong><br>
-                                    • 1 Km/h = 0.278 m/s<br>
-                                    • 1 Mph = 0.447 m/s<br>
-                                    • 1 m/s = 3.6 Km/h = 2.237 Mph
-                                </div>
                             </div>
                         </div>
                         <?php endif; ?>

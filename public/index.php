@@ -73,7 +73,6 @@
         </div>
     </section>
 
-    <!-- Características -->
     <section class="py-5">
         <div class="container">
             <div class="row text-center mb-5">
@@ -182,7 +181,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <p>&copy; 2025 Sistema de Gestión.</p>

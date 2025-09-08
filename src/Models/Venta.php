@@ -87,7 +87,7 @@ class Venta
      */
     public function convertirVelocidad(float $valor, string $unidadOrigen, string $unidadDestino): array
     {
-        // Convertir todo a m/s primero
+        
         $valorEnMS = 0;
         
         switch ($unidadOrigen) {
@@ -102,7 +102,7 @@ class Venta
                 break;
         }
         
-        // Convertir de m/s a la unidad destino
+        
         $resultado = 0;
         switch ($unidadDestino) {
             case 'kmh':

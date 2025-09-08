@@ -22,7 +22,7 @@ class EmpleadoController
         $this->pdfService = new PdfService();
         $this->emailService = new EmailService();
         
-        // Cargar empleados desde la sesión
+        
         if (isset($_SESSION['empleados'])) {
             $empleados = [];
             foreach ($_SESSION['empleados'] as $empData) {
@@ -32,16 +32,9 @@ class EmpleadoController
         }
     }
 
-    /**
-     * Muestra la página principal de empleados
-     */
+    
     public function index(): void
     {
-        // Cargar datos de muestra si no hay empleados
-        if (empty($this->empleadoService->getEmpleados())) {
-            $this->empleadoService->crearEmpleadosMuestra();
-        }
-
         $empleados = $this->empleadoService->getEmpleados();
         $promedios = $this->empleadoService->calcularPromedioSalariosPorDepartamento();
         $departamentoTop = $this->empleadoService->departamentoConMayorPromedio();
@@ -56,9 +49,7 @@ class EmpleadoController
         include __DIR__ . '/../../views/empleados.php';
     }
 
-    /**
-     * Procesa el formulario de nuevo empleado
-     */
+    
     public function crear(): void
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -70,7 +61,7 @@ class EmpleadoController
                 $empleado = new Empleado($nombre, $salario, $departamento);
                 $this->empleadoService->agregarEmpleado($empleado);
                 
-                // Guardar en sesión
+                
                 $this->guardarEmpleadosEnSesion();
                 
                 header('Location: empleados.php?success=1');
@@ -81,9 +72,7 @@ class EmpleadoController
         include __DIR__ . '/../../views/empleado_form.php';
     }
 
-    /**
-     * Calcula el salario neto de un empleado
-     */
+    
     public function calcularSalarioNeto(): void
     {
         $resultado = null;
@@ -100,9 +89,7 @@ class EmpleadoController
         include __DIR__ . '/../../views/salario_neto.php';
     }
 
-    /**
-     * Convierte temperatura
-     */
+    
     public function convertirTemperatura(): void
     {
         $resultado = null;
@@ -117,12 +104,10 @@ class EmpleadoController
         include __DIR__ . '/../../views/temperatura.php';
     }
 
-    /**
-     * Genera PDF de reporte de empleados
-     */
+    
     public function generarPdf(): void
     {
-        // Cargar datos si no existen
+        
         if (empty($this->empleadoService->getEmpleados())) {
             $this->empleadoService->crearEmpleadosMuestra();
         }
@@ -146,9 +131,7 @@ class EmpleadoController
         exit;
     }
 
-    /**
-     * Envía reporte por email
-     */
+    
     public function enviarReporte(): void
     {
         $mensaje = '';
@@ -193,9 +176,7 @@ class EmpleadoController
         include __DIR__ . '/../../views/enviar_reporte.php';
     }
 
-    /**
-     * Guarda los empleados en la sesión para persistencia
-     */
+    
     private function guardarEmpleadosEnSesion(): void
     {
         $_SESSION['empleados'] = [];
