@@ -1,0 +1,8 @@
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use App\Controllers\VentaController;
+
+$controller = new VentaController();
+$controller->calcularInteres();
+?>
