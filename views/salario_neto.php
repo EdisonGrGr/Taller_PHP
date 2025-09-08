@@ -37,7 +37,7 @@
                                 <div class="input-group">
                                     <span class="input-group-text">$</span>
                                     <input type="number" class="form-control" id="salario" name="salario" 
-                                           value="<?= $_POST['salario'] ?? '' ?>" min="1160000" step="1000" required>
+                                           value="<?= $_POST['salario'] ?? '' ?>" min="1423500" step="1000" required>
                                     <span class="input-group-text">COP</span>
                                 </div>
                             </div>

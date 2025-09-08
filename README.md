@@ -1,30 +1,30 @@
-# Sistema de Gestión Empresarial - PHP
+# Sistema de Gestión - PHP
 
 ## Descripción
 
-Aplicación web completa desarrollada en PHP que permite gestionar empleados y ventas de una empresa, con análisis estadísticos avanzados, generación de reportes PDF y envío de correos electrónicos.
+Aplicación web desarrollada en PHP que permite gestionar empleados y ventas de una empresa, con análisis estadísticos, generación de reportes PDF y envío de correos electrónicos.
 
 ## Características Principales
 
 ### 1. Gestión de Empleados
-- ✅ Calcular promedio de salarios por departamento
-- ✅ Determinar departamento con mayor promedio salarial  
-- ✅ Listar empleados que ganan sobre el promedio de su departamento
-- ✅ Calcular salario neto aplicando deducciones de ley colombiana
-- ✅ Conversor de temperatura (Celsius, Fahrenheit, Kelvin)
+- Calcular promedio de salarios por departamento
+- Determinar departamento con mayor promedio salarial  
+- Listar empleados que ganan sobre el promedio de su departamento
+- Calcular salario neto aplicando deducciones de ley colombiana
+- Conversor de temperatura (Celsius, Fahrenheit, Kelvin)
 
 ### 2. Gestión de Ventas
-- ✅ Calcular total de ventas realizadas
-- ✅ Encontrar cliente que más ha gastado
-- ✅ Determinar producto más vendido
-- ✅ Calculadora de interés compuesto
-- ✅ Conversor de velocidad (Km/h, Mph, m/s)
+- Calcular total de ventas realizadas
+- Encontrar cliente que más ha gastado
+- Determinar producto más vendido
+- Calculadora de interés compuesto
+- Conversor de velocidad (Km/h, Mph, m/s)
 
 ### 3. Arquitectura y Tecnologías
-- ✅ Patrón MVC (Modelo-Vista-Controlador)
-- ✅ Autoload PSR-4 con Composer
-- ✅ Librerías externas integradas
-- ✅ Interfaz moderna con Bootstrap 5
+- Patrón MVC (Modelo-Vista-Controlador)
+- Autoload PSR-4 con Composer
+- Librerías externas integradas
+- Interfaz moderna con Bootstrap 5
 
 ### 4. Librerías Utilizadas
 - **DomPDF**: Generación de reportes PDF
@@ -77,9 +77,6 @@ Aplicación web completa desarrollada en PHP que permite gestionar empleados y v
    http://localhost/Laravel/empleados-ventas-app/public/
    ```
 
-4. **Configuración adicional requerida**
-   - Crear un Virtual Host apuntando a `/public/` (opcional)
-   - O usar la ruta completa como se muestra arriba
 
 4. **Verificar permisos**
    - Asegurar que PHP pueda escribir en directorios temporales para PDF
@@ -117,7 +114,6 @@ Aplicación web completa desarrollada en PHP que permite gestionar empleados y v
 #### Conversor de Temperatura
 - **URL**: `/temperatura.php`
 - Convierte de Celsius a Fahrenheit y Kelvin
-- Fórmulas: F = (C × 9/5) + 32, K = C + 273.15
 
 #### Interés Compuesto
 - **URL**: `/interes_compuesto.php`
@@ -181,17 +177,6 @@ La aplicación incluye datos de muestra que se cargan automáticamente:
 3. **Interés Compuesto**: Cálculos financieros
 4. **Conversión Velocidad**: Factores físicos
 
-## Configuración de Producción
-
-### Email SMTP
-En `src/Services/EmailService.php`:
-```php
-// Cambiar de:
-$transport = Transport::fromDsn('smtp://localhost');
-
-// A (ejemplo Gmail):
-$transport = Transport::fromDsn('smtp://usuario:password@smtp.gmail.com:587');
-```
 
 ### Configuración PHP
 Asegurar en `php.ini`:
@@ -213,7 +198,7 @@ memory_limit=256M
 
 ## Autor
 
-
+Jhon Edison Garcia Garcia
 ---
 
 **Fecha**: Septiembre 2025  
